@@ -1,0 +1,23 @@
+alunos = []
+while True:
+    print("\n=====MENU=====")
+    print("1 - Cadastrar alunos")
+    print("2 - Listar Alunos")
+    print("3 - Sair")
+    opcao = int(input("Escolha uma opção:"))
+    if opcao == 1:
+        nome = input("\n-------\nDigite o nome do aluno:")
+        alunos.append(nome)
+        print("\n-------\nO Aluno foi Cadastrado!")
+    elif opcao == 2:
+        if len(alunos) == 0:
+            print("\n-------\nNenhum aluno foi cadastrado!")
+        else:
+            print("\n-------\nLista de Alunos:")
+            for aluno in alunos:
+                print(aluno)
+    elif opcao == 3:
+        print("\n-------\nSistema Encerrado!")
+        break
+else:
+    print("\n-------\nOpção inválida!")
